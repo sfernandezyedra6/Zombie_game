@@ -2,7 +2,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraFollow : MonoBehaviour {
+public class cameraFollow : MonoBehaviour {
 	
 	public Transform target;
 	public float damping = 1;
