@@ -7,13 +7,13 @@ public class hurtSystem : MonoBehaviour {
 	public float force = 0;
 	public bool destroyOnCollision = false;
 	
-	private DamageSystem ds;
+	private LifeSystem ds;
 	
 	void OnCollisionStay2D(Collision2D target){
 		
 		if (target.transform.tag == tagDamage) {
 			Debug.Log (target.transform.tag);
-			ds = target.transform.GetComponent<DamageSystem>();
+			ds = target.transform.GetComponent<LifeSystem>();
 			if(ds){
 				Debug.Log(tagDamage + ":"+damage);
 				ds.hurt(damage);

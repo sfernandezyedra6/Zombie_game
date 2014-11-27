@@ -26,7 +26,7 @@ public class balaScript : MonoBehaviour {
 			var clone = Instantiate (particulas, transform.position, Quaternion.identity)
 				as GameObject;
 			Destroy (clone, 1);
-			Destroy (gameObject);
+			//Destroy (gameObject);
 		
 	}
 	
