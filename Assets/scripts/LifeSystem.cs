@@ -9,7 +9,7 @@ public class LifeSystem : MonoBehaviour {
 	public RectTransform livebar;
 	
 	private float rectLive; 
-	private int maxLive;
+	public int maxLive;
 	
 	// Use this for initialization
 	void Start () {
@@ -25,13 +25,14 @@ public class LifeSystem : MonoBehaviour {
 			muerte();
 
 		}
-		if (live > maxLive) {
-			live = maxLive;
-		}
+
 	}
 	
 	public void hurt(int damage){
 		live = live - damage;
+		if (live > maxLive) {
+			live = maxLive;
+		}
 		var position = new Vector3 (transform.position.x, transform.position.y, -5);
 		if(sangre != null){
 			var clone = Instantiate(sangre,position,Quaternion.identity) as GameObject;
